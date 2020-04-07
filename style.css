@@ -1,0 +1,240 @@
+.anakinface{
+  positon:relative;
+  width:300px;
+  height:300px;
+  color:#222;
+  width:300px;
+  height:300px;
+  margin-bottom:30px;
+}
+  
+.anakinface img{
+  object-fit:cover;
+  width:300px;
+  height:300px;
+  
+}
+
+.first{
+  height:320px;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-content:flex-start;
+  
+}
+
+.second{
+  margin-top:30px;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-content:flex-start;
+}
+
+.third{
+  margin-top:30px;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-content:flex-start;
+}
+
+.fourth{
+  margin-top:30px;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-content:flex-start;
+}
+
+#mynameis{
+  position:absolute;
+  top:270px;
+  margin:auto;
+  z-index:1;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size:25px;
+  color:red;
+}
+
+#anakinskywalker{
+  position:absolute;
+  top:310px;
+  z-index:2;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size:40px;
+  margin:auto;
+}
+
+.list{
+  list-style-type: square;
+}
+
+}
+
+strong{
+  font-size:18px;
+  font-weight:bold;
+  
+}
+
+
+.mainbody{
+  display:flex;
+  flex-direction:column;
+  align-content:flex-start;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 150;
+  color: #222;
+  font-size:15px;
+  margin-top:90px;
+  margin-left:0px;
+  width:600px;
+
+  
+}
+.title{
+  font-family:'Allerta Stencil', sans-serif;
+  font-size: 20px;
+  font-weight:550;
+  text-transform: uppercase;
+}
+.subtitle{
+  margin-top:5px;
+  font-weight:500;
+  font-family:Merriweather;
+  font-style: italic;
+  font-size: 17px;
+  padding:0;
+}
+.midtitle{
+  font-family:Merriweather;
+  font-size:20px;
+  font-weight:550;
+  padding-top:20px;
+  margin:0;
+  margin-bottom:3px;
+}
+
+blockquote {
+  quotes: "“" "”";
+  color:white;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:40px;
+  width:270px;
+  margin:0;
+  padding:20px;
+  margin-bottom:10px;
+  text-align:center;
+  background: grey;
+  height:fit-content;
+}
+  blockquote:before {
+  color: white;
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.3em;
+  margin-right: 0.25em;
+  vertical-align: -0.3em;
+  self-align:flex-start;
+}
+
+container{
+  display:flex;
+  flex-direction:column;
+  align-content: flex-end;
+  justify-content: center;
+  width:100%;
+}
+
+li{
+  font-size:12px;
+  list-style-type: square;
+}
+
+.wholepage{
+  width:800px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+
+.header{
+  position:fixed;
+  display:flex;
+  align-content:center;
+  justify-content: space-between;
+  background:black;
+  color:white;
+  width:800px;
+  height:80px;
+  z-index:3;
+  
+}
+
+a{
+  color:white;
+  text-decoration:none;
+  font-size: 30px;
+  padding:20px;
+  
+}
+
+.space{
+  margin-left:10px;
+}
+
+.quote{
+  height:fit-content;
+}
+
+#bio{
+  position:absolute;
+  left:700px;
+  top:0px;
+  opacity:0;
+}
+
+#achievements{
+  position:absolute;
+  left:700px;
+  top:300px;
+  opacity:0;
+}
+
+#experience{
+  position:absolute;
+  left:700px;
+  top:950px;
+  opacity:0;
+}
+
+#training{
+  position:absolute;
+  left:700px;
+  top:1530px;
+  opacity:0;
+}
+
+
+#home{
+  height:150px;
+  position:fixed;
+  bottom:50px;
+  margin-left:20px;
+  z-index:4;
+}
+
+html{
+  background:#f7f7f7;
+  display:flex;
+  flex-direction:flex;
+  justify-content:center;
+}
+
+.sidebar{
+  position:relative;
+  width:170px;
+  margin-top:90px;
+}

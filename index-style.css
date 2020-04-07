@@ -1,0 +1,156 @@
+header{
+  display:flex;
+  flex-wrap:wrap;
+  width:1366px;
+  color:#222;
+  height:400px;
+  margin-bottom:30px;
+}
+
+#anakin{
+  width:100%;
+  height:100%;
+  z-index:-1;
+  
+}
+
+h2{
+  position: relative;
+  bottom:190px;
+  left:320px;
+  z-index:1;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size:35px;
+}
+
+h1{
+  position:relative;
+  bottom:170px;
+  left:100px;
+  z-index:1;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size:60px;
+
+.list{
+  list-style-type: square;
+  border:thin solid black
+}
+
+}
+
+.line{
+  width:800px;
+  margin-left:250px;
+  margin-top:10px;
+  margin-bottom:10px;
+  self-align:center;
+  height:5px;
+  background:black;
+}
+
+strong{
+  font-size:18px;
+  font-weight:bold;
+  
+}
+.mainbody{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 150;
+  color: #222;
+  font-size:15px;
+  margin-top:0;
+  margin-left:300px;
+  width:700px;
+  display:flex;
+  flex-direction:column;
+
+  
+}
+.title{
+  font-family:'Allerta Stencil', sans-serif;
+  font-size: 20px;
+  font-weight:550;
+  text-transform: uppercase;
+}
+.subtitle{
+  margin-top:5px;
+  font-weight:500;
+  font-family:Merriweather;
+  font-style: italic;
+  font-size: 17px;
+  padding:0;
+}
+
+.midtitle{
+  font-family:Merriweather;
+  font-size:20px;
+  font-weight:550;
+  padding-top:20px;
+  margin:0;
+  margin-bottom:3px;
+}
+
+blockquote {
+  quotes: "“" "”";
+  color:white;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:40px;
+  text-align:center;
+  background: grey;
+  padding-top:25px;
+  padding-left:10px;
+  padding-right:20px;
+  align-self:center;
+  width:700px;
+  height:fit-content;
+}
+  blockquote:before {
+  color: white;
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.3em;
+  margin-right: 0.25em;
+  vertical-align: -0.3em;
+}
+
+container{
+  display:flex;
+  flex-direction:column;
+  align-content: flex-end;
+  justify-content: center;
+  width:100%;
+}
+
+li{
+  font-size:12px;
+  list-style-type: square;
+}
+
+.wholepage{
+  display:flex;
+  flex-direction:column;
+  aling-components:flex-start;
+}
+
+html{
+  background:#f7f7f7;
+}
+
+#readmore{
+  text-align:center;
+}
+
+#readmore a:link{
+  color:#222
+}
+
+#readmore a:visited{
+  color:#222
+}
+#readmore a:hover{
+  color:#532e87
+}
+
+#readmore a:active{
+  color:#532e87
+}
