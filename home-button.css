@@ -1,0 +1,9 @@
+#home_button{
+    position:fixed;
+    bottom: 30px;
+    right:30px;
+}
+
+#home_button img{
+    width:60px;
+}

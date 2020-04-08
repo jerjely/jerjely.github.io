@@ -1,0 +1,25 @@
+.container > div:hover{
+    background:orangered;
+
+}
+
+.container > div{
+    border:thin solid black;
+    margin: 0px;
+    background: none;
+    border-bottom: none;
+    text-align: center;
+    padding:10px;
+    color: rgb(59, 54, 54)
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    
+}
+
+#top{
+    border-top:none;
+}

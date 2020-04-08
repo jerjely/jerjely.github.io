@@ -1,0 +1,25 @@
+.top{
+    display:flex;
+    border: thin solid rgb(0, 132, 255);
+    justify-content: center;
+    margin:20px;
+}
+
+.top > div {
+    width: 40px;
+    height: 40px;
+    background:rgb(0, 132, 255);
+    margin: 20px auto;
+}
+.bottom{
+    display:flex;
+    border:thin solid rgb(0, 132, 255);
+    background:orangered;
+    margin:20px;
+}
+
+.bottom > div {
+    width: 40px;
+    height: 40px;
+    background:rgb(87, 5, 87);
+    margin: 20px auto;
