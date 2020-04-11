@@ -1,0 +1,165 @@
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+
+}
+
+h1{
+    text-align: center;
+    color: rgb(155, 151, 151);
+    font-size: 60px;
+    font-weight:50;
+    font-family: 'Work Sans', sans-serif;
+}
+
+}
+
+#input{
+    width:300px;
+    height:50px;
+    border:none;
+    border-top-left-radius: 5px ;
+}
+#add{
+    margin:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    border:none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px;
+    color:white;
+    font-size:30px;
+    width:fit-content;
+    background:#df2988;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+#container{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    width:fit-content;
+    align-self:center;
+    border:thin solid grey;
+    border-radius:5px;
+}
+
+#list{
+    align-self: center;
+    margin-bottom:50px;
+    min-width:500px;
+    min-height:20px;
+    width:#container;
+    margin-top:30px;
+}
+
+.todo{
+    margin:auto;
+    list-style-type:none;
+    align-self:center;
+    width:350px;
+    text-align:left;
+    display:flex;
+    position: relative;
+    height:25px;
+}
+
+body{
+    background-color: rgb(85, 192, 178);
+    
+}
+
+#bigbox{
+    border:thin solid grey;
+    display:flex;
+    flex-direction:column;
+    width:80%;
+    align-self:center;
+    margin-top: 50px;
+    min-height:600px;
+    border-radius:20px;
+    background-color:rgb(245, 240, 240);
+}
+
+img{
+    height:20px;
+    align-self: flex-end;
+    margin:auto;
+    margin-top:0px;
+    margin-right:5px;
+}
+
+p{
+    font-size:20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:10px;
+    justify-self: flex-start;
+    color:grey;
+    font-family: 'Comic Neue', cursive;
+}
+
+.ticked{
+    margin-left:0px;
+    height:25px;
+}
+
+.tickofbutton{
+    margin-left:0px;
+    height:25px;
+
+}
+
+.unticked{
+    margin-right:0px;
+    height:25px;
+}
+
+#list button{
+    background:none;
+    border: none;
+    height:20px;
+    justify-self: flex-end;
+    justify-content: center;
+    align-self: center;
+    margin-top:0px;
+    margin-right:5px;
+    width:fit-content;
+    display:flex;
+    padding:0px;
+    
+}
+.tickOffButton{
+    position: absolute;
+    right:0px;
+    width:10px;
+    cursor: pointer;
+    outline:none;
+}
+
+.tickOnButton{
+    position: absolute;
+    right:0px;
+    width:10px;
+    cursor: pointer;
+    outline:none;
+}
+
+.empty{
+    right:0px;
+    width:10px;
+    justify-self:center;
+    align-self:center;
+    margin-bottom:19px;
+}
+
+
+.trashButton{
+    position: absolute;
+    right:45px;
+    width:10px;
+    cursor: pointer;
+    outline:none;
+}

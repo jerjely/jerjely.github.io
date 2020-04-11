@@ -1,0 +1,34 @@
+.title{
+    color: orange;
+    font: bold 24px arial, sans-serif ;
+  }
+  
+  .subtitle{
+    color:purple;
+    font: bold 18px arial, sans-serif;
+  
+  }
+  
+  .body{
+    color: black;
+    padding-top:20px;
+    font: 16px arial, sans-serif;
+  }
+  
+  .squarelist{
+    list-style-type:square;
+    font: 16px arial, sans-serif;
+  }
+  
+  .roman{
+    list-style-type: upper-roman;
+  }
+  
+  .purpleunderlined{
+    color: purple ;
+    text-decoration: underline;
+  }
+  
+  .underlined{
+    text-decoration: underline;
+  }
