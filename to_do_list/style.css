@@ -163,3 +163,7 @@ p{
     cursor: pointer;
     outline:none;
 }
+
+#home_button img{
+    height:60px;
+}
