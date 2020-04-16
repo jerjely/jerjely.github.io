@@ -1,12 +1,18 @@
 
-
+#photo{
+    min-width:60vw;
+    max-width:100%;
+    max-height:100%;
+}
 body{
     background-image: linear-gradient(75deg, rgb(235, 232, 232.0) , rgb(194, 238, 240,0.5));
       }
 
 .big_container {
-    height:533px;
-    width:1000px;
+    height:50vw;
+    min-height:400px;
+    min-width:600px;
+    width:80vw;
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -23,7 +29,7 @@ body{
 }
 .small_container{
     width: 99%;
-    height: 130px;
+    height: 20vh;
     display: inline-block;
     align-self: center;
     white-space: nowrap;
@@ -71,16 +77,16 @@ h1{
     height:40px;
     margin:0px;
     margin-left:5px;
+    font-size: min(5vw, 36px);
     opacity: 1;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
-
 }
-
 p{
     margin:5px;
     margin-left:15px;
-    font-size:18px;
+    font-size-adjust: initial;
+    font-size:min(2vw,15px);
     -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: grey;
 }

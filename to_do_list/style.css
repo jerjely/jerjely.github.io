@@ -49,9 +49,8 @@ h1{
 #list{
     align-self: center;
     margin-bottom:50px;
-    min-width:500px;
+    width:100%;
     min-height:20px;
-    width:#container;
     margin-top:30px;
 }
 
@@ -59,7 +58,7 @@ h1{
     margin:auto;
     list-style-type:none;
     align-self:center;
-    width:350px;
+    width:40vw;
     text-align:left;
     display:flex;
     position: relative;
@@ -75,7 +74,7 @@ body{
     border:thin solid grey;
     display:flex;
     flex-direction:column;
-    width:80%;
+    width:80vw;
     align-self:center;
     margin-top: 50px;
     min-height:600px;
