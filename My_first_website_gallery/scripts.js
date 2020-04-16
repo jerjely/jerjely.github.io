@@ -71,7 +71,7 @@ let data13 = {
 let data14 = {
     photo: './Pictures/14.jpg',
     title: 'Hide and seek',
-    description: 'Puma hiding in the bushes'
+    description: 'Lynx hiding in the bushes'
 };  
 let data15 = {
     photo: './Pictures/15.jpg',
