@@ -107,8 +107,8 @@
   "long": "Visual responses of superior colliculus units",
   "repo": "SC-Analysis",
   "accent": "#7aa7ff",
-  "logo": null,
-  "mono": "SC",
+  "logo": "scanalysis.png",
+  "mono": null,
   "soon": "Coming soon: installers for Windows and Mac",
   "desc": "Analyses sorted Neuropixels recordings from the superior colliculus: receptive-field maps, responses to sweeps, looms and blinks with interactive pickers, direction and speed tuning, and Baden-style functional clustering pooled across recordings.",
   "facts": [
@@ -158,8 +158,8 @@
   "long": "Optogenetic LED stimulation",
   "repo": "OptoStim",
   "accent": "#ff5c5c",
-  "logo": null,
-  "mono": "OPT",
+  "logo": "optostim.png",
+  "mono": null,
   "soon": "Coming soon: installers for Windows and Mac",
   "desc": "Controls an LED driver through an Arduino: steady pulse trains and frequency chirps with exact pulse widths, a small OLED display of the TTL signal, and a control window that logs every pulse edge for later alignment.",
   "facts": [
