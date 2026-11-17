@@ -140,9 +140,9 @@
   "name": "FiberView",
   "long": "Fiber photometry",
   "repo": "FiberView",
-  "accent": "#3fd0e0",
-  "logo": null,
-  "mono": "FP",
+  "accent": "#5ee88f",
+  "logo": "fiberview.png",
+  "mono": null,
   "soon": "Coming soon: installers for Windows and Mac",
   "desc": "Records fiber photometry from an NI DAQ or an Arduino with an ADS1115, subtracts the dark offset and computes ΔF/F with several baseline methods, with event averages aligned to visual-stimulus sync pulses.",
   "facts": [
