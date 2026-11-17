@@ -155,17 +155,17 @@
  {
   "group": "Rigs",
   "name": "OptoStim",
-  "long": "Optogenetic LED stimulation",
+  "long": "Laser pulse trains for optogenetics",
   "repo": "OptoStim",
   "accent": "#ff5c5c",
   "logo": "optostim.png",
   "mono": null,
   "soon": "Coming soon: installers for Windows and Mac",
-  "desc": "Controls an LED driver through an Arduino: steady pulse trains and frequency chirps with exact pulse widths, a small OLED display of the TTL signal, and a control window that logs every pulse edge for later alignment.",
+  "desc": "Switches a laser on and off through an Arduino and a MOSFET module: set the pulse width, frequency, number of pulses and trains, press Start, and every command is logged with a timestamp. A built-in simulator lets you try it without hardware.",
   "facts": [
    "Optogenetics",
-   "Arduino + LED driver",
-   "Pulse-edge logging"
+   "Arduino + MOSFET module",
+   "Timestamped log"
   ],
   "slug": "optostim"
  },
