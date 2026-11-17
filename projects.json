@@ -1,0 +1,189 @@
+[
+ {
+  "group": "Imaging",
+  "name": "SURF",
+  "long": "Spontaneous Undulation in Retina Finder",
+  "repo": "SURF",
+  "accent": "#2ee59d",
+  "logo": "surf.png",
+  "mono": null,
+  "soon": null,
+  "desc": "Developmental retinal waves from calcium-imaging videos. It orients the retina dorsal-up, measures a grid of squares, detects calcium events and follows every wave: how often it comes, how fast it travels, which way it goes and how much of the retina it covers. Single-cell analysis at 40× and group statistics are built in.",
+  "facts": [
+   "Calcium imaging",
+   "Wave speed, direction and area",
+   "Validated on synthetic waves"
+  ],
+  "slug": "surf"
+ },
+ {
+  "group": "Imaging",
+  "name": "Arborist",
+  "long": "SC neuron morphology in the laminar frame",
+  "repo": "Arborist",
+  "accent": "#5bdc6c",
+  "logo": "arborist.png",
+  "mono": null,
+  "soon": null,
+  "desc": "Measures where a filled superior colliculus neuron sits: depth from the brain surface and position relative to the Calretinin border of the sensory SC, plus branching, Sholl analysis, the axon initial segment and cell-type classification. Tracing stays in Fiji/SNT.",
+  "facts": [
+   "Patch-clamp fills",
+   "napari based",
+   "Formerly SC_morph"
+  ],
+  "slug": "arborist"
+ },
+ {
+  "group": "Imaging",
+  "name": "MES Viewer",
+  "long": "Femtonics two-photon files",
+  "repo": "MES-Viewer",
+  "accent": "#ff7a59",
+  "logo": null,
+  "mono": "MES",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Browses Femtonics .mes files: every z-stack and image with its metadata, ROI measurements, 3D views, channel subtraction against bleed-through, noise reduction with a fast preview, and TIFF export.",
+  "facts": [
+   "Two-photon",
+   "Z-stacks and ROIs",
+   "3D view"
+  ],
+  "slug": "mes-viewer"
+ },
+ {
+  "group": "Connectomics",
+  "name": "ChATlas",
+  "long": "Retina connectome explorer",
+  "repo": "ChATlas",
+  "accent": "#ff4f86",
+  "logo": "chatlas.png",
+  "mono": null,
+  "soon": null,
+  "desc": "Explores cells in CAVE / Neuroglancer EM datasets (built for <code>stroeh_mouse_retina</code>). Every cell is placed in ChAT-normalised depth, between the OFF (0) and ON (1) starburst bands, using surfaces fitted to the labelled starburst amacrine cells around the region you look at.",
+  "facts": [
+   "EM connectomics",
+   "Stratification vs ChAT bands",
+   "Needs a CAVE token"
+  ],
+  "slug": "chatlas"
+ },
+ {
+  "group": "Lab management",
+  "name": "Mouse Colony",
+  "long": "Breeding colony manager",
+  "repo": "mouse-colony",
+  "accent": "#f3a6b9",
+  "logo": "mousecolony.png",
+  "mono": null,
+  "soon": null,
+  "desc": "Keeps track of breeding pairs, cages and individual mice: warns when breeders get too old, checks relatedness to avoid inbreeding, suggests pairs and predicts offspring genotypes. Cage cards can be read from photos, and the colony can be shared with colleagues through a Google Sheet.",
+  "facts": [
+   "Animal house",
+   "Pedigree and genotypes",
+   "Shared Google Sheet"
+  ],
+  "slug": "mouse-colony"
+ },
+ {
+  "group": "Electrophysiology",
+  "name": "Neuropixels Viewer",
+  "long": "Open Ephys and SpikeGLX recordings",
+  "repo": "NeuropixelsViewer",
+  "accent": "#ffb547",
+  "logo": null,
+  "mono": "NPX",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Shows Neuropixels recordings with traces coloured by shank and ordered by depth. It prepares recordings for Kilosort, lets you curate the sorted units without Phy, drives Open Ephys remotely during recording and sends channels to Toothy.",
+  "facts": [
+   "Neuropixels 2.0",
+   "Curation instead of Phy",
+   "Open Ephys remote control"
+  ],
+  "slug": "neuropixels-viewer"
+ },
+ {
+  "group": "Electrophysiology",
+  "name": "SC Analysis",
+  "long": "Visual responses of superior colliculus units",
+  "repo": "SC-Analysis",
+  "accent": "#7aa7ff",
+  "logo": null,
+  "mono": "SC",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Analyses sorted Neuropixels recordings from the superior colliculus: receptive-field maps, responses to sweeps, looms and blinks with interactive pickers, direction and speed tuning, and Baden-style functional clustering pooled across recordings.",
+  "facts": [
+   "Receptive fields",
+   "Functional clustering",
+   "Pooled recordings"
+  ],
+  "slug": "sc-analysis"
+ },
+ {
+  "group": "Electrophysiology",
+  "name": "HD-MEA Analysis",
+  "long": "BioCam retina recordings",
+  "repo": "HDMEA-Analysis",
+  "accent": "#c58bff",
+  "logo": null,
+  "mono": "MEA",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Analyses high-density MEA recordings of the retina (BioCam .brw): stimulus triggers, spike sorting with HerdingSpikes, light responses, oscillations, receptive-field mapping and cross-correlations for gap-junction coupling.",
+  "facts": [
+   "HD-MEA",
+   "Light responses",
+   "Gap-junction coupling"
+  ],
+  "slug": "hd-mea-analysis"
+ },
+ {
+  "group": "Rigs",
+  "name": "FiberView",
+  "long": "Fiber photometry",
+  "repo": "FiberView",
+  "accent": "#3fd0e0",
+  "logo": null,
+  "mono": "FP",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Records fiber photometry from an NI DAQ or an Arduino with an ADS1115, subtracts the dark offset and computes ΔF/F with several baseline methods, with event averages aligned to visual-stimulus sync pulses.",
+  "facts": [
+   "GCaMP photometry",
+   "NI-DAQmx or Arduino",
+   "ΔF/F and event averages"
+  ],
+  "slug": "fiberview"
+ },
+ {
+  "group": "Rigs",
+  "name": "OptoStim",
+  "long": "Optogenetic LED stimulation",
+  "repo": "OptoStim",
+  "accent": "#ff5c5c",
+  "logo": null,
+  "mono": "OPT",
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Controls an LED driver through an Arduino: steady pulse trains and frequency chirps with exact pulse widths, a small OLED display of the TTL signal, and a control window that logs every pulse edge for later alignment.",
+  "facts": [
+   "Optogenetics",
+   "Arduino + LED driver",
+   "Pulse-edge logging"
+  ],
+  "slug": "optostim"
+ },
+ {
+  "group": "Rigs",
+  "name": "Optokinetic Drum",
+  "long": "Four-monitor optomotor arena",
+  "repo": "OKR-Drum",
+  "accent": "#e6e15a",
+  "logo": null,
+  "mono": "OKR",
+  "soon": "Coming soon: PsychoPy experiment, Raspberry Pi recorder and calibration tools",
+  "desc": "Runs the optokinetic / optomotor test in a drum of four monitors: rotating gratings from PsychoPy with settings for direction, speed and spatial frequency, an overhead Raspberry Pi camera recorder with a serial timing link to the stimulus PC, and a lens calibration that turns DeepLabCut head tracking into real distances.",
+  "facts": [
+   "Behaviour",
+   "PsychoPy + Raspberry Pi",
+   "DeepLabCut-ready"
+  ],
+  "slug": "optokinetic-drum"
+ }
+]
