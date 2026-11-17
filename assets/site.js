@@ -19,6 +19,11 @@ function userOS() {
 }
 const OS = userOS();
 function sizeMB(b) { return b ? (b / 1048576 >= 1000 ? (b / 1073741824).toFixed(1) + " GB" : Math.round(b / 1048576) + " MB") : ""; }
+// "OKR-Drum-1.0.0-RaspberryPi.zip" -> "Raspberry Pi"
+function partName(n) {
+  const m = n.match(/-\d+(?:\.\d+)+-(.+?)\.[a-z0-9]+$/i);
+  return m ? m[1].replace(/([a-z])([A-Z])/g, "$1 $2").replace(/[-_]+/g, " ") : n;
+}
 function el(tag, attrs, html) { const e = document.createElement(tag); Object.assign(e, attrs || {}); if (html) e.innerHTML = html; return e; }
 
 function render(panel, repo, rel) {
@@ -36,7 +41,7 @@ function render(panel, repo, rel) {
     // not an installer project (e.g. scripts or firmware): one button per file
     for (const a of assets.slice(0, 4)) {
       const btn = el("a", { className: "btn", href: a.browser_download_url, title: a.name },
-        `<span>${a.name.replace(/-\d+(\.\d+)+/, "")}</span><small>${sizeMB(a.size)}</small>`);
+        `<span>${partName(a.name)}</span><small>${sizeMB(a.size)}</small>`);
       dl.append(btn);
     }
   } else for (const k of KINDS) {

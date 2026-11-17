@@ -175,8 +175,8 @@
   "long": "Four-monitor optomotor arena",
   "repo": "OKR-Drum",
   "accent": "#e6e15a",
-  "logo": null,
-  "mono": "OKR",
+  "logo": "okrdrum.png",
+  "mono": null,
   "soon": "Coming soon: PsychoPy experiment, Raspberry Pi recorder and calibration tools",
   "desc": "Runs the optokinetic / optomotor test in a drum of four monitors: rotating gratings from PsychoPy with settings for direction, speed and spatial frequency, an overhead Raspberry Pi camera recorder with a serial timing link to the stimulus PC, and a lens calibration that turns DeepLabCut head tracking into real distances.",
   "facts": [
