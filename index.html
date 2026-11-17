@@ -1,29 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start_page</title>
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gergely Szarka – Lab software</title>
+<meta name="description" content="Desktop tools for retina and superior colliculus research: SURF, ChATlas, Arborist and Mouse Colony. Free downloads for Windows and Mac.">
+<link rel="icon" href="assets/surf.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column of project panels, each a logo rail + text + download row. */
+:root {
+  --bg: #f4f6fa;
+  --panel: #ffffff;
+  --ink: #0f1a2e;
+  --muted: #56637a;
+  --line: #dde3ec;
+  --chip: #eef2f8;
+  --btn: #0f1a2e;
+  --btn-ink: #ffffff;
+  --focus: #1d72d8;
+  --display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1120; --panel: #111b2e; --ink: #e8eef8; --muted: #9aa9c2; --line: #22304a;
+    --chip: #18243b; --btn: #e8eef8; --btn-ink: #0a1120; --focus: #6aa8ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a1120; --panel: #111b2e; --ink: #e8eef8; --muted: #9aa9c2; --line: #22304a;
+  --chip: #18243b; --btn: #e8eef8; --btn-ink: #0a1120; --focus: #6aa8ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 980px; margin: 0 auto; }
+
+header.site { padding-block: 56px 28px; display: grid; gap: 14px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 700 clamp(30px, 5vw, 46px)/1.1 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); font-size: 17px; }
+.lede strong { color: var(--ink); font-weight: 600; }
+
+.projects { display: grid; gap: 18px; padding-bottom: 40px; }
+.proj {
+  --accent: #2ee59d;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
+  display: grid; grid-template-columns: 112px 1fr; gap: 22px; padding: 24px;
+  position: relative; overflow: hidden;
+}
+.proj::before {          /* thin accent edge taken from each logo */
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent);
+}
+.logo { width: 112px; height: 112px; border-radius: 24px; display: block; }
+.body { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+h2 { font: 700 26px/1.15 var(--display); margin: 0; }
+.long { font: 500 13px/1.3 var(--mono); color: var(--muted); }
+.desc { margin: 0; max-width: 70ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
+.facts li { background: var(--chip); border-radius: 999px; padding: 3px 10px; font-size: 13px; color: var(--muted); }
+
+.dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  padding: 9px 14px; border-radius: 10px; font: 600 14px/1.2 var(--body);
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  transition: border-color .15s, transform .15s;
+}
+.btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.btn.mine { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
+.btn svg { width: 16px; height: 16px; flex: none; }
+.btn small { font: 400 12px/1 var(--mono); opacity: .75; }
+.meta { font: 400 12.5px/1.4 var(--mono); color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.meta a { color: var(--muted); }
+.meta a:hover { color: var(--ink); }
+
+.help { border-top: 1px solid var(--line); padding-block: 28px; display: grid; gap: 10px; color: var(--muted); font-size: 14.5px; }
+.help h3 { font: 600 16px/1.3 var(--display); color: var(--ink); margin: 0; }
+.help p { margin: 0; max-width: 75ch; }
+footer { border-top: 1px solid var(--line); padding-block: 22px 40px; font-size: 13.5px; color: var(--muted);
+         display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+@media (max-width: 620px) {
+  header.site { padding-block: 36px 20px; }
+  .proj { grid-template-columns: 1fr; padding: 20px; gap: 14px; }
+  .logo { width: 72px; height: 72px; border-radius: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+</style>
 </head>
 <body>
-    <div class=header>
-        <h1>These are my Greenfox Stay # Home Academy solutions <a  href="https://www.greenfoxacademy.com" id='greenfox'><img src="./images/598c28e3153f320001974cdf_green_fox_logo_full.svg" alt="greenfox_logo"></a></h1>
+<div class="wrap">
+
+<header class="site">
+  <div class="eyebrow">Völgyi lab · Szentágothai Research Centre · University of Pécs</div>
+  <h1>Gergely Szarka</h1>
+  <p class="lede">Desktop tools I wrote for our retina and superior colliculus work. Each one is free to download
+    for <strong>Windows</strong> and <strong>Mac</strong> (Apple silicon and Intel), with nothing else to install.</p>
+</header>
+
+<main class="projects" id="projects">
+
+  <article class="proj" style="--accent:#2ee59d" data-repo="SURF">
+    <img class="logo" src="assets/surf.png" alt="SURF logo" width="112" height="112">
+    <div class="body">
+      <div class="title"><h2>SURF</h2><span class="long">Spontaneous Undulation in Retina Finder</span></div>
+      <p class="desc">Developmental retinal waves from calcium-imaging videos. It orients the retina dorsal-up,
+        measures a grid of squares, detects calcium events and follows every wave: how often it comes, how
+        fast it travels, which way it goes and how much of the retina it covers. Single-cell analysis at 40×
+        and group statistics are built in.</p>
+      <ul class="facts"><li>Calcium imaging</li><li>Wave speed, direction and area</li><li>Validated on synthetic waves</li></ul>
+      <div class="dl" data-dl></div>
+      <div class="meta" data-meta></div>
     </div>
-    <div class=container>
-        <a href="./My_first_website_gallery/index.html">Gallery Viewer</a>
-        <a href="./to_do_list/index.html">To-Do List</a>
-        <a href="./javascript_click_counter/click_counter.html">Click_counter</a>
-        <a href="./jedi_main.html">Jedi website</a>
-        <a href="./javascript-4/index.html">Button Changer</a>
-        <a href="./CSS selector.html">CSS selector tutorial</a>
-        <a href="./git-hub-tutorial.html">Git-Hub tutorial</a>
-        <a href="./20boxes.html">20 Boxes</a>
-        
+  </article>
+
+  <article class="proj" style="--accent:#ff4f86" data-repo="ChATlas">
+    <img class="logo" src="assets/chatlas.png" alt="ChATlas logo" width="112" height="112">
+    <div class="body">
+      <div class="title"><h2>ChATlas</h2><span class="long">Retina connectome explorer</span></div>
+      <p class="desc">Explores cells in CAVE / Neuroglancer EM datasets (built for <code>stroeh_mouse_retina</code>).
+        Every cell is placed in ChAT-normalised depth, between the OFF (0) and ON (1) starburst bands, using
+        surfaces fitted to the labelled starburst amacrine cells around the region you look at.</p>
+      <ul class="facts"><li>EM connectomics</li><li>Stratification vs ChAT bands</li><li>Needs a CAVE token</li></ul>
+      <div class="dl" data-dl></div>
+      <div class="meta" data-meta></div>
     </div>
+  </article>
+
+  <article class="proj" style="--accent:#5bdc6c" data-repo="Arborist">
+    <img class="logo" src="assets/arborist.png" alt="Arborist logo" width="112" height="112">
+    <div class="body">
+      <div class="title"><h2>Arborist</h2><span class="long">SC neuron morphology in the laminar frame</span></div>
+      <p class="desc">Measures where a filled superior colliculus neuron sits: depth from the brain surface and
+        position relative to the Calretinin border of the sensory SC, plus branching, Sholl analysis, the
+        axon initial segment and cell-type classification. Tracing stays in Fiji/SNT.</p>
+      <ul class="facts"><li>Patch-clamp fills</li><li>napari based</li><li>Formerly SC_morph</li></ul>
+      <div class="dl" data-dl></div>
+      <div class="meta" data-meta></div>
+    </div>
+  </article>
+
+  <article class="proj" style="--accent:#f3a6b9" data-repo="mouse-colony">
+    <img class="logo" src="assets/mousecolony.png" alt="Mouse Colony logo" width="112" height="112">
+    <div class="body">
+      <div class="title"><h2>Mouse Colony</h2><span class="long">Breeding colony manager</span></div>
+      <p class="desc">Keeps track of breeding pairs, cages and individual mice: warns when breeders get too old,
+        checks relatedness to avoid inbreeding, suggests pairs and predicts offspring genotypes. Cage cards
+        can be read from photos, and the colony can be shared with colleagues through a Google Sheet.</p>
+      <ul class="facts"><li>Animal house</li><li>Pedigree and genotypes</li><li>Shared Google Sheet</li></ul>
+      <div class="dl" data-dl></div>
+      <div class="meta" data-meta></div>
+    </div>
+  </article>
+
+</main>
+
+<section class="help" aria-labelledby="first-start">
+  <h3 id="first-start">Opening an installer the first time</h3>
+  <p>The installers are not code-signed yet. On <strong>Windows</strong>, if SmartScreen says it protected your PC,
+    click <em>More info</em> → <em>Run anyway</em>. On a <strong>Mac</strong>, if the .pkg is blocked, open
+    <em>System Settings → Privacy &amp; Security</em> and click <em>Open Anyway</em>. Not sure which Mac you have?
+    Apple menu → <em>About This Mac</em> shows an <em>Apple M</em> chip or an <em>Intel</em> processor.</p>
+</section>
+
+<footer>
+  <span>Source code, manuals and older versions on <a href="https://github.com/jerjely">GitHub · jerjely</a></span>
+  <a href="playground.html">Earlier web exercises</a>
+</footer>
+</div>
+
+<script>
+// Each panel asks GitHub for its latest release and links its installers directly.
+// If GitHub can't be reached, the buttons still lead to the release page.
+const OWNER = "jerjely";
+const KINDS = [
+  { key: "win",   label: "Windows",   test: n => /windows.*\.exe$/i.test(n) },
+  { key: "arm",   label: "Mac · Apple silicon", test: n => /(arm64|applesilicon).*\.pkg$/i.test(n) },
+  { key: "intel", label: "Mac · Intel", test: n => /(x86_64|intel).*\.pkg$/i.test(n) },
+];
+const ICON = {
+  win: '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 2.3 6.5 1.4v6.1H0zm7.3-1L16 0v7.5H7.3zM0 8.5h6.5v6.1L0 13.7zm7.3 0H16V16l-8.7-1.2z"/></svg>',
+  mac: '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M11.2 8.5c0-1.6 1.3-2.3 1.4-2.4-.8-1.1-1.9-1.3-2.3-1.3-1-.1-1.9.6-2.4.6s-1.3-.6-2.1-.5c-1.1 0-2.1.6-2.6 1.6-1.1 2-.3 4.9.8 6.5.5.8 1.2 1.6 2 1.6s1.1-.5 2.1-.5 1.2.5 2.1.5 1.4-.8 1.9-1.6c.6-.9.8-1.7.9-1.8 0 0-1.8-.7-1.8-2.7zM9.6 3.6c.4-.5.7-1.2.6-1.9-.6 0-1.4.4-1.8.9-.4.4-.7 1.1-.6 1.8.7.1 1.4-.3 1.8-.8z"/></svg>',
+};
+function userOS() {
+  const p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent;
+  if (/win/i.test(p)) return "win";
+  if (/mac/i.test(p)) return "mac";
+  return "";
+}
+const OS = userOS();
+function sizeMB(b) { return b ? (b / 1048576 >= 1000 ? (b / 1073741824).toFixed(1) + " GB" : Math.round(b / 1048576) + " MB") : ""; }
+function el(tag, attrs, html) { const e = document.createElement(tag); Object.assign(e, attrs || {}); if (html) e.innerHTML = html; return e; }
+
+function render(panel, repo, rel) {
+  const dl = panel.querySelector("[data-dl]"), meta = panel.querySelector("[data-meta]");
+  const page = `https://github.com/${OWNER}/${repo}/releases/latest`;
+  dl.innerHTML = ""; meta.innerHTML = "";
+  for (const k of KINDS) {
+    const a = rel && rel.assets ? rel.assets.find(x => k.test(x.name)) : null;
+    const mine = (k.key === "win" && OS === "win") || (k.key !== "win" && OS === "mac");
+    const btn = el("a", { className: "btn" + (mine ? " mine" : ""), href: a ? a.browser_download_url : page },
+      (k.key === "win" ? ICON.win : ICON.mac) + `<span>${k.label}</span>` + (a ? `<small>${sizeMB(a.size)}</small>` : ""));
+    if (a) btn.title = a.name;
+    dl.append(btn);
+  }
+  if (rel && rel.tag_name) {
+    const d = rel.published_at ? new Date(rel.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : "";
+    meta.append(el("span", {}, `Version ${rel.tag_name.replace(/^v/, "")}${d ? " · " + d : ""}`));
+  }
+  meta.append(el("a", { href: page }, "All downloads"));
+  meta.append(el("a", { href: `https://github.com/${OWNER}/${repo}` }, "Source and manual"));
+}
+
+document.querySelectorAll(".proj").forEach(panel => {
+  const repo = panel.dataset.repo;
+  render(panel, repo, null);                       // usable at once, before GitHub answers
+  const key = "rel:" + repo, cached = (() => { try { return JSON.parse(sessionStorage.getItem(key)); } catch (e) { return null; } })();
+  if (cached) { render(panel, repo, cached); return; }
+  fetch(`https://api.github.com/repos/${OWNER}/${repo}/releases/latest`, { headers: { Accept: "application/vnd.github+json" } })
+    .then(r => r.ok ? r.json() : null)
+    .then(rel => {
+      if (!rel) return;
+      const slim = { tag_name: rel.tag_name, published_at: rel.published_at,
+                     assets: (rel.assets || []).map(a => ({ name: a.name, size: a.size, browser_download_url: a.browser_download_url })) };
+      try { sessionStorage.setItem(key, JSON.stringify(slim)); } catch (e) {}
+      render(panel, repo, slim);
+    })
+    .catch(() => {});
+});
+</script>
 </body>
 </html>
