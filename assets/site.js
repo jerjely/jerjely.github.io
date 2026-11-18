@@ -18,7 +18,12 @@ function userOS() {
   return "";
 }
 const OS = userOS();
-function sizeMB(b) { return b ? (b / 1048576 >= 1000 ? (b / 1073741824).toFixed(1) + " GB" : Math.round(b / 1048576) + " MB") : ""; }
+function sizeMB(b) {
+  if (!b) return "";
+  if (b >= 1073741824) return (b / 1073741824).toFixed(1) + " GB";
+  if (b >= 1048576) return Math.round(b / 1048576) + " MB";
+  return Math.max(1, Math.round(b / 1024)) + " KB";
+}
 // "OKR-Drum-1.0.0-RaspberryPi.zip" -> "Raspberry Pi"
 function partName(n) {
   const m = n.match(/-\d+(?:\.\d+)+-(.+?)\.[a-z0-9]+$/i);
@@ -37,20 +42,20 @@ function render(panel, repo, rel) {
     return;
   }
   const assets = (rel && rel.assets) || [];
-  if (assets.length && !KINDS.some(k => assets.some(x => k.test(x.name)))) {
-    // not an installer project (e.g. scripts or firmware): one button per file
-    for (const a of assets.slice(0, 4)) {
-      const btn = el("a", { className: "btn", href: a.browser_download_url, title: a.name },
-        `<span>${partName(a.name)}</span><small>${sizeMB(a.size)}</small>`);
-      dl.append(btn);
-    }
-  } else for (const k of KINDS) {
-    const a = rel && rel.assets ? rel.assets.find(x => k.test(x.name)) : null;
+  const hasInst = assets.some(x => KINDS.some(k => k.test(x.name)));
+  if (!assets.length || hasInst) for (const k of KINDS) {
+    const a = assets.find(x => k.test(x.name));
     const mine = (k.key === "win" && OS === "win") || (k.key !== "win" && OS === "mac");
     const btn = el("a", { className: "btn" + (mine ? " mine" : ""), href: a ? a.browser_download_url : page },
       (k.key === "win" ? ICON.win : ICON.mac) + `<span>${k.label}</span>` + (a ? `<small>${sizeMB(a.size)}</small>` : ""));
     if (a) btn.title = a.name;
     dl.append(btn);
+  }
+  // other files in the release (scripts, firmware, Raspberry Pi recorder...): one button each
+  const extra = assets.filter(x => !KINDS.some(k => k.test(x.name)) && !/\.(sha256|txt|md)$/i.test(x.name));
+  for (const a of extra.slice(0, 8)) {
+    dl.append(el("a", { className: "btn", href: a.browser_download_url, title: a.name },
+      `<span>${partName(a.name)}</span><small>${sizeMB(a.size)}</small>`));
   }
   if (rel && rel.tag_name) {
     const d = rel.published_at ? new Date(rel.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : "";
@@ -65,7 +70,7 @@ document.querySelectorAll(".proj, .app").forEach(panel => {
   render(panel, repo, null);                       // usable at once, before GitHub answers
   // a release is remembered for 10 minutes, and only once its installers are attached
   // (right after a release is made, GitHub lists it for a minute before the files are uploaded)
-  const key = "rel2:" + repo, cached = (() => { try { return JSON.parse(sessionStorage.getItem(key)); } catch (e) { return null; } })();
+  const key = "rel3:" + repo, cached = (() => { try { return JSON.parse(sessionStorage.getItem(key)); } catch (e) { return null; } })();
   if (cached && Date.now() - cached.t < 600000) { render(panel, repo, cached.rel); return; }
   fetch(`https://api.github.com/repos/${OWNER}/${repo}/releases/latest`, { headers: { Accept: "application/vnd.github+json" } })
     .then(r => r.ok ? r.json() : null)
