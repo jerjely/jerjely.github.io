@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SyncCam – Gergely Szarka</title>
-<meta name="description" content="Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone. Every frame, sample and TTL edge is saved on the same clock. An IR LED driven by the Arduino shows up in the video, so you can check the alignment and measure the camera&#x27;s delay.">
+<meta name="description" content="Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone, and switches an IR LED. Every TTL pulse is saved with the video frame at that moment and the sound at the same sample, so video, sound and the Neuropixels recording line up.">
 <link rel="icon" href="../assets/synccam.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
   </header>
 
   <section class="app-body">
-    <p class="desc lead">Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone. Every frame, sample and TTL edge is saved on the same clock. An IR LED driven by the Arduino shows up in the video, so you can check the alignment and measure the camera's delay.</p>
-    <ul class="facts"><li>Behaviour video</li><li>Arduino TTL + microphone</li><li>IR LED sync check</li></ul>
+    <p class="desc lead">Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone, and switches an IR LED. Every TTL pulse is saved with the video frame at that moment and the sound at the same sample, so video, sound and the Neuropixels recording line up.</p>
+    <ul class="facts"><li>Behaviour video</li><li>Arduino TTL + microphone</li><li>Frame for every TTL pulse</li></ul>
     <div class="dl-box">
       <h2 class="label">Download</h2>
       <div class="dl" data-dl></div>

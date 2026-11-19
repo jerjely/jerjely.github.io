@@ -178,11 +178,11 @@
   "logo": "synccam.png",
   "mono": null,
   "soon": "Coming soon: installers for Windows and Mac",
-  "desc": "Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone. Every frame, sample and TTL edge is saved on the same clock. An IR LED driven by the Arduino shows up in the video, so you can check the alignment and measure the camera's delay.",
+  "desc": "Records video from a USB camera while an Arduino samples the TTL sync signal that also goes to the Neuropixels, plus a microphone, and switches an IR LED. Every TTL pulse is saved with the video frame at that moment and the sound at the same sample, so video, sound and the Neuropixels recording line up.",
   "facts": [
    "Behaviour video",
    "Arduino TTL + microphone",
-   "IR LED sync check"
+   "Frame for every TTL pulse"
   ],
   "slug": "synccam"
  },
