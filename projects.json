@@ -136,6 +136,23 @@
   "slug": "hd-mea-analysis"
  },
  {
+  "group": "Behaviour",
+  "name": "Wriggle",
+  "long": "Worm tracking from petri-dish videos",
+  "repo": "Wriggle",
+  "accent": "#e0527f",
+  "logo": "wriggle.png",
+  "mono": null,
+  "soon": "Coming soon: installers for Windows and Mac",
+  "desc": "Follows a single worm in a dish video along its whole body, also when it coils over itself, and keeps head and tail apart with a small neural network trained on your own labelled frames. It measures length, head and tail angles and speeds, and how straight, compact or coiled the animal is, with built-in validation, single-recording statistics and group comparison.",
+  "facts": [
+   "Behaviour video",
+   "Length, angle, speed, coiling",
+   "Trained network for head and tail"
+  ],
+  "slug": "wriggle"
+ },
+ {
   "group": "Rigs",
   "name": "FiberView",
   "long": "Fiber photometry",
