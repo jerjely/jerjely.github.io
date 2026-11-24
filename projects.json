@@ -188,6 +188,23 @@
  },
  {
   "group": "Rigs",
+  "name": "VisRig",
+  "long": "Visual stimuli and pupil tracking for Neuropixels",
+  "repo": "VisRig",
+  "accent": "#1f9fd6",
+  "logo": "visrig.png",
+  "mono": null,
+  "soon": "Coming soon: installers for Windows",
+  "desc": "Runs visual Neuropixels recordings from one window: the Baden battery, drifting gratings, the SC battery of sweeps, blinks and looms, receptive field mapping and spontaneous grey on the stimulus monitor, frame-locked like PsychoPy, with a TTL to the OneBox at every change and a photodiode patch for the true screen time. It tracks the pupil live (centre, size, eye movement and dilation), switches the IR LED, measures the camera delay, plans angled probe insertions on the Allen atlas and names every file the lab's way.",
+  "facts": [
+   "Stimuli + TTL + photodiode",
+   "Live pupil tracking",
+   "Probe planner"
+  ],
+  "slug": "visrig"
+ },
+ {
+  "group": "Rigs",
   "name": "SyncCam",
   "long": "Behaviour video synced to Neuropixels",
   "repo": "SyncCam",
